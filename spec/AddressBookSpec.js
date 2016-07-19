@@ -24,14 +24,11 @@ describe('Address Book', function() {
 describe('Async Address Book', function() {
 	var addressBook = new AddressBook();
 
-	beforeEach(function(done) {
-		addressBook.getInitialContacts(function() {
-			done();
-		});
+	beforeEach(function() {
+		addressBook.getInitialContacts();
 	});
 
 	it('should grab initial contacts', function() {
 		expect(addressBook.initialComplete).toBe(true);
-		done();
 	});
 });
